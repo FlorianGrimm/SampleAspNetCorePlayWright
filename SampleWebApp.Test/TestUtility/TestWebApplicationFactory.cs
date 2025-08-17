@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace SampleWebApp.Test.TestUtility;
+﻿namespace SampleWebApp.Test.TestUtility;
 
 public class TestWebApplicationFactory
     : WebApplicationFactory<Program>, TUnit.Core.Interfaces.IAsyncInitializer {
@@ -19,13 +16,8 @@ public class TestWebApplicationFactory
         await this.TestPing();
     }
 
-    private Flurl.Url? _BaseAddress;
     public Flurl.Url GetBaseAddress() {
-        if (_BaseAddress is { } result) {
-            return result.Clone();
-        } else {
-            return (this._BaseAddress = this.ClientOptions.BaseAddress).Clone();
-        }
+        return new Flurl.Url(this.ClientOptions.BaseAddress);
     }
 
     public async Task TestPing() {
@@ -35,7 +27,7 @@ public class TestWebApplicationFactory
             RequestUri = new Uri("/test/ping", UriKind.Relative)
         };
         using var response = await client.SendAsync(request);
-        
+
         response.EnsureSuccessStatusCode();
         var stringContent = await response.Content.ReadAsStringAsync();
 
@@ -44,7 +36,7 @@ public class TestWebApplicationFactory
 
     public async Task TestSignIn(string authenticationValue) {
         using var client = this.CreateClient();
-        client.DefaultRequestHeaders.Authorization 
+        client.DefaultRequestHeaders.Authorization
             = new System.Net.Http.Headers.AuthenticationHeaderValue(
                 scheme: "TestScheme",
                 parameter: authenticationValue
@@ -53,7 +45,7 @@ public class TestWebApplicationFactory
         using var request = new HttpRequestMessage() {
             Method = HttpMethod.Get,
             RequestUri = new Uri("/test/sign-in"),
-            
+
         };
         using var response = await client.SendAsync(request);
 

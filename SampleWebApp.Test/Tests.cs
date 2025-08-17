@@ -29,8 +29,6 @@ public class Tests : SamplePageTest {
         var user = this.GetTestAuthenticationUser().UserPlanner1;
         client.DefaultRequestHeaders.Authorization = user.GetAuthenticationHeaderValue();
 
-        var baseAddress = client.BaseAddress;
-        System.Console.Out.WriteLine($"baseAddress: {baseAddress}");
         Flurl.Url url = urlRoot.Clone().AppendPathSegment("/test/sign-in");
         var response = await client.GetAsync(url);
         response.EnsureSuccessStatusCode();

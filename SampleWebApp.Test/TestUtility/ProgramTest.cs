@@ -10,11 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using System.Security.Claims;
-using System.Text.Encodings.Web;
-using System.Text.RegularExpressions;
-
-using TUnit.Playwright;
-
 namespace SampleWebApp.Test.TestUtility;
 
 public class ProgramTest : Program {
