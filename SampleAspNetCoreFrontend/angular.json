@@ -18,6 +18,9 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "outputPath": {
+              "base": "C:/github/FlorianGrimm/SampleAspNetCorePlayWright/SampleWebApp/wwwroot/static"
+            },
             "polyfills": [
               "zone.js"
             ],
@@ -59,6 +62,9 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "hmr": false
+          },
           "configurations": {
             "production": {
               "buildTarget": "SampleAspNetCoreFrontend:build:production"

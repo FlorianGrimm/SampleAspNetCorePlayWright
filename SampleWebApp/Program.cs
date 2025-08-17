@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Authentication.Negotiate;
+using Microsoft.Extensions.FileProviders;
 
 namespace SampleWebApp;
+
 public class Program {
     public static Func<string[], Task> MainRun = ((string[] args) => (new Program()).Run(args));
     public static async Task Main(string[] args) {
@@ -28,6 +29,8 @@ public class Program {
         // Add services to the container.
         builder.Services.AddRazorPages();
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSingleton<AngularFileService>();
+        
         this.ConfigureAddAuthentication(builder);
     }
 
@@ -54,9 +57,10 @@ public class Program {
 
     protected virtual void ConfigureMapEndpoints(WebApplication app) {
         app.MapGet("/ping", () => "pong");
+        app.UseAngularFileService();
+
         app.MapStaticAssets();
-        app.MapRazorPages()
-           .WithStaticAssets();
+        //app.UseEndpoints(e => { });
     }
 
     protected virtual void OnPostRunAsync(WebApplicationBuilder builder, WebApplication app) {
