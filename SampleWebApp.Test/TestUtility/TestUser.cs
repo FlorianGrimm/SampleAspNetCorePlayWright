@@ -1,4 +1,4 @@
-namespace SampleWebApp.Test.TestUtility;
+namespace Sample.WebApp.Test.TestUtility;
 
 /// <summary>
 /// Represents a test user with authentication credentials and role information.

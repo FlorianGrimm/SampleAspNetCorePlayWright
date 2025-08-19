@@ -1,4 +1,4 @@
-namespace SampleWebApp.Test.TestUtility.Test;
+namespace Sample.WebApp.Test.TestUtility.Test;
 
 /// <summary>
 /// Unit tests for the <see cref="TestUser"/> record and <see cref="TestUserExtension"/> class.

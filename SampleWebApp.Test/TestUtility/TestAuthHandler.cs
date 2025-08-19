@@ -1,4 +1,4 @@
-﻿namespace SampleWebApp.Test.TestUtility;
+﻿namespace Sample.WebApp.Test.TestUtility;
 
 /// <summary>
 /// Authentication scheme options for the test authentication handler.

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 
-namespace SampleWebApp.Test.TestUtility.Test;
+namespace Sample.WebApp.Test.TestUtility.Test;
 
 /// <summary>
 /// Integration tests for the <see cref="TestAuthHandler"/> authentication process.

@@ -1,4 +1,4 @@
-﻿namespace SampleWebApp.Test.TestUtility;
+﻿namespace Sample.WebApp.Test.TestUtility;
 
 public class TestWebApplicationFactory
     : WebApplicationFactory<Program>, TUnit.Core.Interfaces.IAsyncInitializer {

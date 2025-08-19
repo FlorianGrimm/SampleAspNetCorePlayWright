@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.FileProviders;
-using SampleWebApp.Services;
-
-namespace Microsoft.AspNetCore.Builder;
+﻿namespace Microsoft.AspNetCore.Builder;
 
 public static class AngularFileServiceExtension {
     public static WebApplication UseAngularFileService(this WebApplication app) {

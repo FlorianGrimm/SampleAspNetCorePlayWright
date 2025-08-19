@@ -18,7 +18,7 @@ global using global::Microsoft.Extensions.DependencyInjection;
 global using global::Microsoft.Extensions.Hosting;
 global using global::Microsoft.Extensions.Options;
 
-global using global::SampleWebApp.Test.TestUtility;
+global using global::Sample.WebApp.Test.TestUtility;
 
 global using global::TUnit.Playwright;
 global using global::TUnit;

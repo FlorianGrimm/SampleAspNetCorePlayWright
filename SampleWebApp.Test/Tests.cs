@@ -1,4 +1,4 @@
-﻿namespace SampleWebApp.Test;
+﻿namespace Sample.WebApp.Test;
 public class Tests : SamplePageTest {
 
     [Test, TUnit.Core.Explicit]

@@ -15,7 +15,8 @@ global using global::Microsoft.AspNetCore.Hosting;
 global using global::Microsoft.AspNetCore.Identity;
 
 global using global::Microsoft.Extensions.DependencyInjection;
+global using global::Microsoft.Extensions.FileProviders;
 global using global::Microsoft.Extensions.Hosting;
 global using global::Microsoft.Extensions.Options;
 
-global using global::SampleWebApp.Services;
+global using global::Sample.WebApp.Services;

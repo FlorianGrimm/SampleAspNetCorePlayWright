@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace SampleWebApp.Test.TestUtility;
+namespace Sample.WebApp.Test.TestUtility;
 
 /// <summary>
 /// Provides a collection of predefined test users for authentication testing.

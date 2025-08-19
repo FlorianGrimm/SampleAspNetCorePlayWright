@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace SampleWebApp.Test;
+namespace Sample.WebApp.Test;
 public class Hooks {
     [Before(TestSession)]
     public static void InstallPlaywright() {

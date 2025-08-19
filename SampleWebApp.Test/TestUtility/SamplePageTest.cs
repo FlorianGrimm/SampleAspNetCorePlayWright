@@ -1,4 +1,4 @@
-﻿namespace SampleWebApp.Test.TestUtility;
+﻿namespace Sample.WebApp.Test.TestUtility;
 
 public class SamplePageTest : PageTest{
     [ClassDataSource<TestWebApplicationFactory>(Shared = SharedType.PerTestSession)]

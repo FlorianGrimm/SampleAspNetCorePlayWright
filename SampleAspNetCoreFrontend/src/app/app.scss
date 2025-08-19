@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+.app-toolbar {
+    mat-tab-group{
+        width: 100%;
+    }
+  @include mat.toolbar-overrides((
+    standard-height: 120px
+  ));
+}
+
+.mat-toolbar-single-row {
+    height: 120px;
+}
+
+$--mat-sidenav-container-width: 200px;
+mat-sidenav.app-sidenav{
+    width: $--mat-sidenav-container-width;
+}

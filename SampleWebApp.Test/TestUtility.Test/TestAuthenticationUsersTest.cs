@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace SampleWebApp.Test.TestUtility.Test;
+namespace Sample.WebApp.Test.TestUtility.Test;
 
 /// <summary>
 /// Unit tests for the <see cref="TestAuthenticationUsers"/> class.

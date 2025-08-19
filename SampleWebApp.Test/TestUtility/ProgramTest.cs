@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 using System.Security.Claims;
-namespace SampleWebApp.Test.TestUtility;
+namespace Sample.WebApp.Test.TestUtility;
 
 public class ProgramTest : Program {
     public static void Enable() {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.FileProviders;
 
-namespace SampleWebApp.Services;
+namespace Sample.WebApp.Services;
 public class AngularFileService {
     private readonly IWebHostEnvironment _WebHostEnvironment;
 

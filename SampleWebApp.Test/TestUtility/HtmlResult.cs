@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace SampleWebApp.Test.TestUtility;
+namespace Sample.WebApp.Test.TestUtility;
 public static class ResultsExtensions {
     public static IResult Html(this IResultExtensions resultExtensions, string html, string? testAuthCookie) {
         ArgumentNullException.ThrowIfNull(resultExtensions);

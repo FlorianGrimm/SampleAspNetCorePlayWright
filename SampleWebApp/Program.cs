@@ -1,6 +1,6 @@
 using Microsoft.Extensions.FileProviders;
 
-namespace SampleWebApp;
+namespace Sample.WebApp;
 
 public class Program {
     public static Func<string[], Task> MainRun = ((string[] args) => (new Program()).Run(args));
