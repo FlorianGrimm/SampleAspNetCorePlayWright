@@ -13,16 +13,7 @@ public class UserRepository {
     }
     public UserRepositoryState CreateUser(MUser value) {
         var action = new CreateUser() { Value = value };
-        while (true) {
-            var state = this.State;
-            var nextState = this.ApplyCreateUser(state, action);
-
-            var actions = state.Actions.Add(new CreateUser() { Value = value });
-            UserRepositoryState result = nextState with { Actions = actions };
-            if (ReferenceEquals(
-                System.Threading.Interlocked.CompareExchange(ref this._State, result, state),
-                state)) { return result; }
-        }
+        return this.Execute(action);
     }
 
     public UserRepositoryState Execute(ITransformState<MUser> action) {
@@ -43,6 +34,7 @@ public class UserRepository {
         return state with { Items = items };
     }
 
+    // https://github.com/martinothamar/Mediator
     public UserRepositoryState Apply(UserRepositoryState state, ITransformState<MUser> action) {
         if (action is CreateUser createUser) {
             return this.ApplyCreateUser(state, createUser);
